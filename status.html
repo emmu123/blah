@@ -73,14 +73,17 @@
 		<h3>PLAY.INDIANFORGE.XYZ</h3>
 	</header>
 	<!-- End Header -->
+<section id="status">
 
     <div class="center-container">
         <div class="flex flex-col ">
             <h1 class="text-7xl font-medium text-white-800 mb-5" id="server-ip">play.gwmcraft.tk</h1>
             <span class="text-gray-300 text-lg mb-3 server-online" id="motd">A beautiful minecraft server</span>
             <div class=" text-3xl"><span class="font-semibold server-status" id="player-count">0</span> Players Online</div>
+		<img src="https://mcapi.us/server/image?ip=play.indianforge.xyz&port=30000" width="333">
         </div>
     </div>
+</section>
 <script>
 function initServerData(serverIp,serverPort){
     const serverIpElement = document.getElementById('server-ip');
@@ -109,7 +112,7 @@ function initServerData(serverIp,serverPort){
 
 }
 
-initServerData("in2.mcnode.in","30000");
+initServerData("play.indianforge.xyz","30000");
 
 </script>
 
