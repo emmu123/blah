@@ -19,8 +19,8 @@ function sendMessage() { // After submitting the form.
         footer: { text: `made by dsc.gg/milcondev | User ID: ${(userID.value).toString()}` }, // Footer of the embed
         fields: [ // Fields of the embed
             { name: "User", value: `${username.value}#${(usertag.value).toString()}`, inline: true },
-            { name: "Mail", value: `${reason.value}` },
-            { name: "Issue", value: `${appeal.value}` }
+            { name: "Mail", value: `${mail.value}` },
+            { name: "Issue", value: `${issue.value}` }
         ]
     }
 
