@@ -3,8 +3,8 @@ const avatarURL = "https://indianforge.xyz/if.png" // OPTIONAL | The URL for the
 
 // Getting the elements from the HTML page
 const username = document.getElementById('username')
-const reason = document.getElementById('reason')
-const appeal = document.getElementById('appeal')
+const reason = document.getElementById('mail')
+const appeal = document.getElementById('issue')
 
 function sendMessage() { // After submitting the form.
     var request = new XMLHttpRequest() // Creates a new XML Http Request
@@ -19,9 +19,8 @@ function sendMessage() { // After submitting the form.
         footer: { text: `made by dsc.gg/milcondev | User ID: ${(userID.value).toString()}` }, // Footer of the embed
         fields: [ // Fields of the embed
             { name: "User", value: `${username.value}#${(usertag.value).toString()}`, inline: true },
-            { name: "UserID", value: `${(userID.value).toString()}`, inline: true },
-            { name: "Bot choosen", value: `${reason.value}` },
-            { name: "paid ?", value: `${appeal.value}` }
+            { name: "Mail", value: `${reason.value}` },
+            { name: "Issue", value: `${appeal.value}` }
         ]
     }
 
