@@ -20,10 +20,11 @@ function sendMessage() { // After submitting the form.
         color: 0xFF0000, // Color of the embed
         footer: { text: `User ID: ${(userID.value).toString()}` }, // Footer of the embed
         fields: [ // Fields of the embed
-            { name: "User", value: `${username.value}`, inline: true },
-
+            { name: "User", value: `${username.value}#${(usertag.value).toString()}`, inline: true },
+            { name: "UserID", value: `${(userID.value).toString()}`, inline: true },
+            { name: "Plan", value: `${reason.value}` },
             { name: "Mail", value: `${mail.value}` },
-            { name: "Location", value: `${issue.value}` },
+            { name: "Location", value: `${appeal.value}` },
           { name: "Age", value: `${age.value}` }
         ]
     }
