@@ -74,77 +74,13 @@
 	</header>
 	<!-- End Header -->
 
-	<section id="status">
-    <div class="server-status">
-      <h2>The server is currently <span class="server-online"></span></h2>
+    <div class="center-container">
+        <div class="flex flex-col ">
+            <h1 class="text-7xl font-medium text-white-800 mb-5" id="server-ip">play.gwmcraft.tk</h1>
+            <span class="text-gray-300 text-lg mb-3 server-online" id="motd">A beautiful minecraft server</span>
+            <div class=" text-3xl"><span class="font-semibold server-status" id="player-count">0</span> Players Online</div>
+        </div>
     </div>
-		 <div class=" text-3xl"><span class="font-semibold server-status" id="player-count">0</span> Players Online</div>
-		<div class="motd">
-			<h3>===> INDIAN FORGE <=== [LifeSteal]-[Modded]-[Season 1]</h3><span class="motd"> </span>
-		</div>
-		
-	</section>
-
-	<a style="display:block;" href="#">
-	  <div class="discord-banner"><img class="discord-img" width="333" src="img/Discord-Logo+Wordmark-White.svg"></div>
-	</a>
-
-	<footer>
-		<div class="footer">
-			<div class="copyright-notice">
-				<!-- !! Replace this with your own domain !! -->
-				<p>Indianforge.xyz &copy; | All rights reserved</p>
-				<!-- If you want to, you're allowed to delete these credits. But if you want to support my work, please leave it. -->
-				
-			</div>
-		</div>
-	</footer>
-
-<script src="https://mcapi.us/scripts/minecraft.js"></script>
-    <script>
-      MinecraftAPI.getServerStatus('play.indianforge.xyz', { //Add your IP here!
-        port: 30000 // optional, only if you need a custom port
-      }, function (err, status) {
-        if (err) {
-          return document.querySelector('.server-status').innerHTML = '<font color="#c0392b">An error occurred while loading server status, if you see this the server IP has not been set or not set correctly!</font><br><br><img width="333" src="https://media.giphy.com/media/GDnomdqpSHlIs/giphy.gif">';
-        }
-
-        // you can change these to your own message!
-        document.querySelector('.server-online').innerHTML = status.online ? '<font color="#2ecc71">Online <i class="far fa-smile"></i></font><br><br><img width="333" src="https://mcapi.us/server/image?ip=play.indianforge.xyz&port=30000">' : '<font color="#e74c3c"> Offline <i class="far fa-frown"></i></font><br><br><img width="333" src="https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif">';
-      });
-	       const motd = document.getElementById("motd");
-        motd.querySelector = data.motd;
-    </script>
-
-	<script>
-	function myFunction() {
-	    var x = document.getElementById("myTopnav");
-	    if (x.className === "topnav") {
-	        x.className += " responsive";
-	    } else {
-	        x.className = "topnav";
-	    }
-	}
-	</script>
-
-	<script>
-	// When the user scrolls down 20px from the top of the document, show the button
-	window.onscroll = function() {scrollFunction()};
-
-	function scrollFunction() {
-	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-	        document.getElementById("myBtn").style.display = "block";
-	    } else {
-	        document.getElementById("myBtn").style.display = "none";
-	    }
-	}
-
-	// When the user clicks on the button, scroll to the top of the document
-	function topFunction() {
-	    document.body.scrollTop = 0;
-	    document.documentElement.scrollTop = 0;
-	}
-	</script>
 <script>
 function initServerData(serverIp,serverPort){
     const serverIpElement = document.getElementById('server-ip');
@@ -176,6 +112,7 @@ function initServerData(serverIp,serverPort){
 initServerData("in2.mcnode.in","30000");
 
 </script>
+
 
 </body>
 </html>
