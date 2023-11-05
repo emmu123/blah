@@ -106,6 +106,57 @@
 			</div>
 		</div>
 	</section>
+		<section id="status">
+			 <center>
+        <form onsubmit="sendMessage()">
+            <div class="mb-3 w-50 text-start">
+                <label for="username" class="form-label">Username: </label>
+                <input required type="text" id="username" placeholder="Username" class="form-control" aria-describedby="usernameInfo">
+                <div id="usernameInfo" class="form-text">Put your Discord Username here! (Ex: AaryanKh)</div>
+            </div>
+            <div class="mb-3 w-50 text-start">
+                <label for="usertag" class="form-label">User Tag: </label>
+                <input required type="number" id="usertag" placeholder="User Tag" class="form-control" aria-describedby="usertagInfo" maxlength="4">
+                <div id="usertagInfo" class="form-text">Put your Discord Tag (Discriminator) here! (Ex: 4532)</div>
+            </div>
+            <div class="mb-3 w-50 text-start">
+                <label for="userID" class="form-label">User ID: </label>
+                
+              <input required type="number" id="userID" placeholder="User ID" class="form-control" aria-describedby="userIDInfo" maxlength="18">
+                <div id="userIDInfo" class="form-text">Put your Discord User ID here! (Ex: 4532)</div>
+            </div>
+            <div class="mb-3 w-50 text-start">
+                <label for="reason" class="form-label">Which Bot Want </label>
+                <input required type="text" id="reason" placeholder="Click Me and choose" class="form-control" aria-describedby="reasonInfo" list="banReasons">
+                <div id="reasonInfo" class="form-text">Select the Bot </div>
+            </div>
+            <div class="mb-3 w-50 text-start">
+                <label for="appeal" class="form-label"> paid or not paid</label>
+                <input required type="text" id="appeal" placeholder="Type Yes or No" class="form-control" aria-describedby="appealInfo">
+                <div id="appealInfo" class="form-text">You Paid To EMMU?</div>
+            </div>
+  
+<div class="mb-3 w-50 text-start">
+                <label for="appeal" class="form-label"> Make Ticket And Give avatar ,token, prefix</label>
+                <input required type="text" id="ticket" placeholder="Type Ok" class="form-control" aria-describedby="appealInfo">
+                <div id="appealInfo" class="form-text">Make ticket admin will check your order</div>
+            </div>
+  
+
+          
+            <button id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </center>
+    <datalist id="banReasons">
+        <option>Welcome Bot</option>
+        <option>Uptimer Bot</option>
+        <option>Milanio Bot Hosted</option>
+        <option>Milarto Hosted</option>
+        <option>Any bot Hosted</option>
+    </datalist>
+    <script src="./index.js"></script>
+		</section>
+
 
 	<a style="display:block;" href="https://discord.gg/St6wvQTK5m">
 	  <div class="discord-banner"><img class="discord-img" width="333" src="img/Discord-Logo+Wordmark-White.svg"></div>
