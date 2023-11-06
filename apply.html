@@ -84,11 +84,11 @@
       </div>
     <div class="mb-3">
         <label for="text" class="form-label">Enter your age</label>
-        <input type="text" class="form-control" id="age">
+        <input type="text" class="form-control" id="text">
       </div>
     <div class="mb-3">
         <label for="time" class="form-label">How many hours you can active in Server</label>
-        <input type="text" class="form-control" id="hours">
+        <input type="text" class="form-control" id="time">
       </div>
       <div class="mb-3">
         <label for="messageInput" class="form-label">Enter your experience</label>
@@ -105,9 +105,9 @@
         const senderEmail = document
           .getElementById('name').value;
         const age = document
-          .getElementById('age').value;
+          .getElementById('text').value;
         const hours = document
-          .getElementById('hours').value;
+          .getElementById('time').value;
         const senderMessage = document
           .getElementById('messageInput').value;
 
@@ -116,8 +116,8 @@
             title: 'Contact Form Submitted',
             fields: [
               { name: 'Sender', value: senderEmail },
-              { name: 'Message', value: age },
-            , { name: 'Message', value: hours },
+              { name: 'Age', value: age },
+            , { name: 'Hours', value: hours },
               { name: 'Message', value: senderMessage }
 
             ]
