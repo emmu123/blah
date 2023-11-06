@@ -82,6 +82,11 @@
         <label for="emailInput" class="form-label">Enter your Discord name</label>
         <input type="text" class="form-control" id="emailInput">
       </div>
+
+	  <div class="mb-3">
+        <label for="age" class="form-label">Enter your Age</label>
+        <input type="text" class="form-control" id="age">
+      </div>
       <div class="mb-3">
         <label for="messageInput" class="form-label">Enter your experience</label>
         <textarea class="form-control" id="messageInput" rows="3"></textarea>
@@ -96,6 +101,10 @@
 
         const senderEmail = document
           .getElementById('emailInput').value;
+
+	       const ages = document
+          .getElementById('age').value;
+	      
         const senderMessage = document
           .getElementById('messageInput').value;
 
@@ -104,8 +113,10 @@
             title: 'Contact Form Submitted',
             fields: [
               { name: 'Sender', value: senderEmail },
+	      { name: 'Age', value: ages },
               { name: 'Message', value: senderMessage }
-            ]
+
+	    ]
           }],
         };
 
