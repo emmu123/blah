@@ -79,8 +79,8 @@
 			<center>
  <form onsubmit="sendContact(event)">
       <div class="mb-3">
-        <label for="emailInput" class="form-label">Enter your discord name</label>
-        <input type="text" class="form-control" id="emailInput">
+        <label for="name" class="form-label">Enter your discord name</label>
+        <input type="text" class="form-control" id="name">
       </div>
     <div class="mb-3">
         <label for="text" class="form-label">Enter your age</label>
@@ -103,7 +103,7 @@
         ev.preventDefault();
 
         const senderEmail = document
-          .getElementById('emailInput').value;
+          .getElementById('name').value;
         const age = document
           .getElementById('age').value;
         const hours = document
