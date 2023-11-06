@@ -1,26 +1,113 @@
-<html>
-  <head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  </head>
-  <body class="container mt-5">
-    <form onsubmit="sendContact(event)">
+<!--
+
+	Template made by: Rick Klaasboer
+	www.rickklaasboer.online
+
+	Version: 1.0.0
+
+	Note: All the images on the demo are not stored locally, 
+	but stored on other servers, 
+	if they're not showing, one of the links could be broken!
+
+	Need support?
+	Leave a comment on the SpigotMC page
+
+	See anything broken?
+	Leave a comment on the SpigotMC page
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5837904876467920"
+     crossorigin="anonymous"></script>
+	
+		<link rel="icon" href="/if.png" >
+
+  <title>Indian Forge | Minecraft Community</title>
+
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta charset="utf-8">
+
+	<!-- Custom CSS for this template -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="js/bootstrap/bootstrap.min.js">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
+	
+	<!-- Navbar -->
+	<div class="topnav" id="myTopnav">
+		<div class="max-width">
+			  <a href="index.html">Home</a>
+			  <a href="about.html">About</a>
+			  <a href="vote.html">Vote</a>
+			  <a href="staff.html">Staff</a>
+			  <a href="status.html">Status</a>
+
+			  <a href="contact.html">Contact</a>
+		  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+	</div>
+	<!-- End Navbar -->
+
+	<!-- Header (Banner) -->
+	<header id="head-contact" class="parallax">
+		<h1>Apply Staff or Helper</h1>
+		<h3>PLAY.INDIANFORGE.XYZ</h3>
+	</header>
+	<!-- End Header -->
+  
+		<section id="status">
+			<center>
+ <form onsubmit="sendContact(event)">
       <div class="mb-3">
-        <label for="emailInput" class="form-label">Enter your email address</label>
-        <input type="email" class="form-control" id="emailInput">
+        <label for="emailInput" class="form-label">Enter your discord name</label>
+        <input type="text" class="form-control" id="emailInput">
+      </div>
+    <div class="mb-3">
+        <label for="age" class="form-label">Enter your age</label>
+        <input type="text" class="form-control" id="age">
+      </div>
+    <div class="mb-3">
+        <label for="hours" class="form-label">How many hours you can active in Server</label>
+        <input type="text" class="form-control" id="hours">
       </div>
       <div class="mb-3">
-        <label for="messageInput" class="form-label">Enter your message</label>
+        <label for="messageInput" class="form-label">Enter your experience</label>
         <textarea class="form-control" id="messageInput" rows="3"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <script>
+		</section>
+</center>
+	 <script>
       async function sendContact(ev) {
         ev.preventDefault();
 
         const senderEmail = document
           .getElementById('emailInput').value;
+        const age = document
+          .getElementById('age').value;
+        const hours = document
+          .getElementById('hours').value;
         const senderMessage = document
           .getElementById('messageInput').value;
 
@@ -29,7 +116,10 @@
             title: 'Contact Form Submitted',
             fields: [
               { name: 'Sender', value: senderEmail },
+              { name: 'Message', value: age },
+            , { name: 'Message', value: hours },
               { name: 'Message', value: senderMessage }
+
             ]
           }],
         };
@@ -45,11 +135,58 @@
         });
 
         if (response.ok) {
-          alert('I have received your message!');
+          alert('Your issue were send to our team. Soon they will contact through Mail.... ');
         } else {
           alert('There was an error! Try again later!');
         }
       }
     </script>
-  </body>
+
+
+	<a style="display:block;" href="https://discord.gg/St6wvQTK5m">
+	  <div class="discord-banner"><img class="discord-img" width="333" src="img/Discord-Logo+Wordmark-White.svg"></div>
+	</a>
+
+	<footer>
+		<div class="footer">
+			<div class="copyright-notice">
+				<!-- !! Replace this with your own domain !! -->
+				<p>yourserver.com &copy; | All rights reserved</p>
+				<!-- If you want to, you're allowed to delete these credits. But if you want to support my work, please leave it. -->
+				
+			</div>
+		</div>
+	</footer>
+
+	<script>
+	function myFunction() {
+	    var x = document.getElementById("myTopnav");
+	    if (x.className === "topnav") {
+	        x.className += " responsive";
+	    } else {
+	        x.className = "topnav";
+	    }
+	}
+	</script>
+
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	        document.getElementById("myBtn").style.display = "block";
+	    } else {
+	        document.getElementById("myBtn").style.display = "none";
+	    }
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	    document.body.scrollTop = 0;
+	    document.documentElement.scrollTop = 0;
+	}
+	</script>
+
+</body>
 </html>
