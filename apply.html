@@ -75,23 +75,15 @@
 	</header>
 	<!-- End Header -->
   
-		<section id="status">
+	<section id="status">
 			<center>
  <form onsubmit="sendContact(event)">
       <div class="mb-3">
-        <label for="name" class="form-label">Enter your discord name</label>
-        <input type="text" class="form-control" id="name">
-      </div>
-    <div class="mb-3">
-        <label for="text" class="form-label">Enter your age</label>
-        <input type="text" class="form-control" id="text">
-      </div>
-    <div class="mb-3">
-        <label for="time" class="form-label">How many hours you can active in Server</label>
-        <input type="text" class="form-control" id="time">
+        <label for="emailInput" class="form-label">Enter your email address</label>
+        <input type="email" class="form-control" id="emailInput">
       </div>
       <div class="mb-3">
-        <label for="messageInput" class="form-label">Enter your experience</label>
+        <label for="messageInput" class="form-label">Enter your message</label>
         <textarea class="form-control" id="messageInput" rows="3"></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
@@ -103,11 +95,7 @@
         ev.preventDefault();
 
         const senderEmail = document
-          .getElementById('name').value;
-        const age = document
-          .getElementById('text').value;
-        const hours = document
-          .getElementById('time').value;
+          .getElementById('emailInput').value;
         const senderMessage = document
           .getElementById('messageInput').value;
 
@@ -116,10 +104,7 @@
             title: 'Contact Form Submitted',
             fields: [
               { name: 'Sender', value: senderEmail },
-              { name: 'Age', value: age },
-            , { name: 'Hours', value: hours },
               { name: 'Message', value: senderMessage }
-
             ]
           }],
         };
@@ -141,6 +126,7 @@
         }
       }
     </script>
+	
 
 
 	<a style="display:block;" href="https://discord.gg/St6wvQTK5m">
